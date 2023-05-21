@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daccount</title>
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/custom.css">
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="icon" href="./image/dacc_icon.png">
+</head>
+<body>
+    
+    <section>
+        <header class="navbar-dacc">
+            <div class="logo">
+                <img src="./image/dacc_icon.png">
+            </div>
+            <div class="hamberger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <nav class="container-fluid nav-bar">
+                <ul class="container-fluid">
+                    <ul class="menuList">
+                        <li>
+                            <a href="index.html" class="menu">Home</a></li>
+                        <li>
+                            <a href="p2p.html" class="menu">Product<img src="./image/asset/Group 7.png"></a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu">Plans</a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu">Support<img src="./image/asset/Group 7.png"></a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu">About us</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="#"><button class="button-primary-outline btn1">change</button></a>
+                        </li>
+                        <li>
+                            <a href="#"><button class="button-primary btn2">Login</button></a>
+                        </li>
+                    </ul>
+                </ul>
+            </nav>
+        </header>
+    </section>
+
+    <section class="homeHero">
+        <div class="container-fluid top">
+            <div class="text">
+                <h1 class="display-3">Simplify your accounting <br>with our software</h1>
+            </div>
+            <div class="btn">
+                <button class="button-neutral-outline">learn more</button>
+            </div>
+        </div>
+        <div class="container-fluid second">
+            <div class="text">
+                <h1>Revolutionize your accounting. Upgrade to <br>our cutting-edge software today!</h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="product">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-3 module-items">
+                    <a href="#">
+                        <div class="card">
+                            <div class="picture">
+                                <img src="image/P2P Picture.png">
+                            </div>
+                            <div class="product-name">
+                                <h3>
+                                    P2P Module
+                                </h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-3 module-items">
+                    <a href="#">
+                        <div class="card">
+                            <div class="picture">
+                                <img src="image/O2C.png">
+                            </div>
+                            <div class="product-name">
+                                <h3>
+                                    O2C Module
+                                </h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-3 module-items">
+                   <a href="#">
+                        <div class="card">
+                            <div class="picture">
+                                <img src="image/fin-gl.png">
+                            </div>
+                            <div class="product-name">
+                                <h3>
+                                    FIN-GL Module
+                                </h3>
+                            </div>
+                        </div>
+                   </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container-fluid container-feature">
+            <div class="row feature-odds ">
+                <div class="col-12 col-lg-3 items order-md-1">
+                    <div class="feature-image">
+                        <img src="./image/Subtract.png">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 order-md-2">
+                    <div class="feature-text">
+                        <h1>access anytime</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur blanditiis 
+                            voluptates labore. Illum sed officiis culpa cupiditate consectetur impedit aspernatur!
+                        </p>
+                        <ul>
+                            <li class="feature-list">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, excepturi?</li>
+                            <li class="feature-list">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, excepturi?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row feature-event ">
+                <div class="col-12 col-lg-3 items oder-1 order-lg-2">
+                    <div class="feature-image">
+                        <img src="./image/Subtract.png">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 oder-2 order-lg-1">
+                    <div class="feature-text">
+                        <h1>work anywhere</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur blanditiis 
+                            voluptates labore. Illum sed officiis culpa cupiditate consectetur impedit aspernatur!
+                        </p>
+                        <ul>
+                            <li class="feature-list">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, excepturi?</li>
+                            <li class="feature-list">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, excepturi?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        
+    </section>
+
+    <script>
+        hamberger = document.querySelector('.hamberger');
+        hamberger.onclick = () => {
+            navbar = document.querySelector('.nav-bar');
+            navbar.classList.toggle('active');
+        }
+        buttonActive = document.querySelector('.active');
+        buttonActive.onclick = () => {
+            menuActive = document.querySelector('.menu')
+            menuActive.classList.toggle('active')
+        }
+    </script>
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
