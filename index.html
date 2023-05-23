@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daccount</title>
-    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/custom.css">
-    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <title>Index</title>
+    <link rel="stylesheet" href="custom.css">
     <link rel="icon" href="./image/dacc_icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
     
@@ -22,28 +22,61 @@
                 <div class="line"></div>
             </div>
             <nav class="container-fluid nav-bar">
-                <ul class="container-fluid">
+                <div class="container-fluid">
                     <ul class="menuList">
-                        <li>
-                            <a href="index.html" class="menu">Home</a></li>
-                        <li>
-                            <a href="p2p.html" class="menu">Product<img src="./image/asset/Group 7.png"></a>
+                        <li class="navbarItem">
+                            <a href="index.html" class="menu">Home</a>
                         </li>
-                        <li>
-                            <a href="#" class="menu">Plans</a>
+                        <li class="navbarItem" id="openDropdown">
+                            <a href="#" class="menu">Product<img src="/image/asset/Group 7.png" class="icon" alt="icon"></a>
+                            <ul class="dropdownList active">
+                                <li class="dropdownItem">
+                                    <a href="p2p.html">
+                                        <div class="image">
+                                            <img src="/image/P2P Picture.png" alt="P2P">
+                                        </div>
+                                        <div class="text">
+                                            <h3>Procure to Pay</h3>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="dropdownItem">
+                                    <a href="o2c.html">
+                                        <div class="image">
+                                            <img src="/image/O2C.png" alt="P2P">
+                                        </div>
+                                        <div class="text">
+                                            <h3>Order to Cash</h3>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="dropdownItem">
+                                    <a href="fin-gl.html">
+                                        <div class="image">
+                                            <img src="/image/fin-gl.png" alt="P2P">
+                                        </div>
+                                        <div class="text">
+                                            <h3>FIN - GL</h3>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
-                        <li>
-                            <a href="#" class="menu">Support<img src="./image/asset/Group 7.png"></a>
+                        <li class="navbarItem">
+                            <a href="plans.html" class="menu">Plans</a>
                         </li>
-                        <li>
+                        <li class="navbarItem">
+                            <a href="#" class="menu">Support<img src="./image/asset/Group 7.png" alt="icon" class="icon"></a>
+                        </li>
+                        <li class="navbarItem">
                             <a href="#" class="menu">About us</a>
                         </li>
                     </ul>
                     <ul>
-                        <li>
+                        <li class="button">
                             <a href="#"><button class="button-primary-outline btn1">change</button></a>
                         </li>
-                        <li>
+                        <li class="button">
                             <a href="#"><button class="button-primary btn2">Login</button></a>
                         </li>
                     </ul>
@@ -75,7 +108,7 @@
                     <a href="#">
                         <div class="card">
                             <div class="picture">
-                                <img src="image/P2P Picture.png">
+                                <img src="image/P2P Picture.png" alt="P2P module">
                             </div>
                             <div class="product-name">
                                 <h3>
@@ -162,22 +195,62 @@
         </div>
     </section>
 
-    <section>
-        
-    </section>
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-3">
+                    <h1>Daccount</h1>
+                    <p>
+                        Triagle soft Co.,Ltd<br>
+                        1213/237 Soi Ladprao 94, Phlapphla Subdistrict, Wang Thonglang District Bangkok 10310 Tel 085xxxxxxx example@humano.co.th
+                    </p>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <h2>Product</h1>
+                    <ul>
+                        <li><a href="#">Package and Promotion</a></li>
+                        <li><a href="#">P2P Module</a></li>
+                        <li><a href="#">O2C Module</a></li>
+                        <li><a href="#">FIN-GL Module</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <h2>Resource</h1>
+                    <ul>
+                        <li><a href="#">Manaul</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <h2>Other</h1>
+                    <ul>
+                        <li><a href="#">Payment</a></li>
+                        <li><a href="#">Term of Service</a></li>
+                        <li><a href="#">Cookies Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="licence">
+                <p>&copy;2023 Daccount Co.,Ltd All right reserved</p>
+            </div>
+            <div class="follow">
+                <h5>follow us</h5>
+                <div class="follow-item">
+                    <a href="#"><img src="/image/asset/Vector.png" alt=""></a>
+                </div>
+                <div class="follow-item">
+                    <a href="#"><img src="/image/asset/IG.png" alt=""></a>
+                </div>
+                <div class="follow-item">
+                    <a href="#"><img src="/image/asset/LINE_New_App_Icon_(2020-12).png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-    <script>
-        hamberger = document.querySelector('.hamberger');
-        hamberger.onclick = () => {
-            navbar = document.querySelector('.nav-bar');
-            navbar.classList.toggle('active');
-        }
-        buttonActive = document.querySelector('.active');
-        buttonActive.onclick = () => {
-            menuActive = document.querySelector('.menu')
-            menuActive.classList.toggle('active')
-        }
-    </script>
+    <script src="main.js"></script>
+
     <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
 </body>
 </html>

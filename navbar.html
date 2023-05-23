@@ -1,25 +1,73 @@
-<nav class="navbar-dacc">
-    <div class="container-fluid">
+<section>
+    <header class="navbar-dacc">
         <div class="logo">
-            <img src="./image/dacc_icon.png" class="logo">
+            <img src="./image/dacc_icon.png">
         </div>
-        <div class="menu" id="menu">
-            <ul class="item-navbar" id="itemNavbar">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Product <img src="./image/asset/Group 7.png"></a></li>
-                <li><a href="#">plans</a></li>
-                <li><a href="#">Support <img src="./image/asset/Group 7.png"></a></li>
-                <li><a href="#">About us</a></li>
-            </ul>
-            <ul class="navbarBtn">
-                <li>
-                    <button class="button-primary-outline">change</button>
-                </li>
-                <li>
-                    <button class="button-primary">login</button>
-                </li>
-            </ul>
+        <div class="hamberger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
         </div>
-        <button class="toggle-btn" id="toggleBtn"><span>menu</span><img src="./image/asset/Group 2311.png"></button>
-    </div>
-</nav>
+        <nav class="container-fluid nav-bar">
+            <div class="container-fluid">
+                <ul class="menuList">
+                    <li class="navbarItem">
+                        <a href="index.html" class="menu">Home</a>
+                    </li>
+                    <li class="navbarItem" id="openDropdown">
+                        <a href="#">Product</a>
+                        <ul class="dropdownList active">
+                            <li class="dropdownItem">
+                                <a href="p2p.html">
+                                    <div class="image">
+                                        <img src="/image/P2P Picture.png" alt="P2P">
+                                    </div>
+                                    <div class="text">
+                                        <h3>Procure to Pay</h3>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="dropdownItem">
+                                <a href="o2c.html">
+                                    <div class="image">
+                                        <img src="/image/P2P Picture.png" alt="P2P">
+                                    </div>
+                                    <div class="text">
+                                        <h3>Order to Cash</h3>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="dropdownItem">
+                                <a href="fin-gl.html">
+                                    <div class="image">
+                                        <img src="/image/P2P Picture.png" alt="P2P">
+                                    </div>
+                                    <div class="text">
+                                        <h3>FIN - GL</h3>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navbarItem">
+                        <a href="#" class="menu">Plans</a>
+                    </li>
+                    <li class="navbarItem">
+                        <a href="#" class="menu">Support<img src="./image/asset/Group 7.png"></a>
+                    </li>
+                    <li class="navbarItem">
+                        <a href="#" class="menu">About us</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="button">
+                        <a href="#"><button class="button-primary-outline btn1">change</button></a>
+                    </li>
+                    <li class="button">
+                        <a href="#"><button class="button-primary btn2">Login</button></a>
+                    </li>
+                </ul>
+            </ul>
+        </nav>
+    </header>
+</section>

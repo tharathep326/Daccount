@@ -40,7 +40,7 @@ header .logo img {
     width: 60px;
 }
 
-header ul.container-fluid {
+header div.container-fluid {
     display: flex;
     position: relative;
     align-items: center;
@@ -50,33 +50,53 @@ header ul.container-fluid {
     padding: 0;
 }
 
-header ul.container-fluid ul {
+header div.container-fluid ul {
     display: flex;
     margin: 0;
     padding: 0;
 }
 
-header ul li {
+header ul li .btn1,
+header ul li .btn2{
+    list-style: none;
+    margin: 10px;
+}
+
+header ul li.navbarItem {
     display: flex;
     align-items: center;
     list-style: none;
     margin: 5px;
     height: 48px;
-}
-
-header ul li a {
-    display: block;
-    text-decoration: none;
+    align-items: center;
     font-size: 20px;
     font-weight: 600;
-    transition: all 0.7s;
+    transition: all 0.2s;
     padding: 0 32px;
 }
 
-header ul.container-fluid:first-child li:hover a {
+header ul li.navbarItem a.menu {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+header li img.icon{
+    margin: 0 0 3px 5px;
+} 
+
+header li.button {
+    list-style: none;
+}
+
+header div.container-fluid:first-child li.navbarItem:hover  {
     display: flex;
     align-items: center;
     color: var(--neutral2);
+    outline: 2px var(--secondary) solid;
+    height: 48px;
+    border-radius: 10px;
 }
 
 header ul li a.active {
@@ -90,6 +110,59 @@ header ul li a.active {
 
 .hamberger {
     display: none;
+}
+
+
+header nav ul.menuList li a.menu {
+    margin: 0 auto;
+}
+
+header nav ul.dropdownList {
+    display: flex;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: -130px;
+    background: #fff;
+    margin-top: 60px;
+    transition: all 0.7s;
+    z-index: 1;
+}
+
+header nav ul.dropdownList.active {
+    display: none;
+    transition: all 0.7s;
+}
+
+header nav ul.dropdownList {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header nav ul.dropdownList li.dropdownItem {
+    height: fit-content;
+    margin-top: 100px;
+    list-style: none;
+} 
+
+header nav ul.dropdownList li.dropdownItem a {
+    text-decoration: none;
+    color: var(--secondary);
+}
+
+header nav ul.dropdownList li.dropdownItem .image{
+    overflow: hidden;
+}
+
+header nav ul.dropdownList li.dropdownItem .image img:hover {
+    transform: scale(1.1);
+    transition: 0.7s;
+}
+
+header nav ul.dropdownList li.dropdownItem .text {
+    margin-top: 20px;
+    text-align: center;
 }
 
 @media screen and (max-width: 1300px) {
@@ -122,29 +195,28 @@ header ul li a.active {
         border-bottom: 1px var(--neutral1) solid;
         box-shadow: 5px rgba(0,0,0,0.05);
     }
-    .nav-bar ul.container-fluid {
+    .nav-bar div.container-fluid {
         display: grid;
         justify-content: center;
         align-items: center;
         margin: 0 auto;
     }
-    .nav-bar ul.container-fluid ul{
+    .nav-bar div.container-fluid ul.menuList{
         display: grid;
         align-items: center;
         justify-content: center;
-        width: fit-content;
         text-align: center;
         transition: all 0.5s;
         margin: 0 auto;
     }
-    .nav-bar.active ul.container-fluid ul li{
-        opacity: 1;
+    .nav-bar.active div.container-fluid ul li{
+        display: block;
     } 
-    .nav-bar ul.container-fluid ul li {
+    .nav-bar div.container-fluid ul li {
         display: flex;
         justify-content: center;
         margin-bottom: 10px;
-        opacity: 0;
+        display: none;
         transition: 0.5s;
     }
     header ul li a {
@@ -158,6 +230,29 @@ header ul li a.active {
     header ul li a:hover {
         color: var(--secondary);
         transition: all 0.2s;
+    }
+    header nav ul.dropdownList {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        left: -10px;
+        right: 0;
+        top: -60px;
+        display: flex;
+        justify-content: space-around;
+    }
+    header nav ul.dropdownList li.dropdownItem {
+        width: 200px;
+        height: 200px;
+        position: relative;
+    }
+    header nav ul.dropdownList li.dropdownItem .image {
+        width: 200px;
+    }
+    header nav ul.dropdownList li.dropdownItem .image img {
+        margin: 0;
+        padding: 0;
+        width: 200px;
     }
 }
 
@@ -233,27 +328,6 @@ header ul li a.active {
     transition: 0.5s;
 }
 
-/* #toggleBtn {
-    display: none;
-    border: none;
-    background:var(--primary);
-    position: absolute;
-    right: 40px;
-}
-
-#toggleBtn span {
-    font-size: 25px;
-    padding: 1rem;
-    color: var(--neutral1);
-}
-
-#toggleBtn .line {
-    width: 40px;
-    background: var(--neutral1);
-    height: 2px;
-    transition: all 0.5s;
-} */
-
 .homeHero .top {
     background: var(--primary);
     height: 350px;
@@ -297,6 +371,7 @@ header ul li a.active {
 
 .product .picture img {
     width: 300px;
+    z-index: 999;
 }
 
 .product .product-name {
@@ -357,7 +432,7 @@ header ul li a.active {
     margin-bottom: 10px;
 }
 
-.feature-text .feature-list {
+.feature-list {
     padding-left: 2rem;
     background-image: url('../../image/asset/teenyicons_tick-outline.png');
     background-repeat: no-repeat;
@@ -476,9 +551,13 @@ header ul li a.active {
     margin: 0 40px;
 }
 
-.anotherPrograms .programs .image:hover {
+.anotherPrograms .programs .image {
+    overflow: hidden;
+}
+
+.anotherPrograms .programs .image img:hover {
     transform: scale(105%);
-    transition: 0.7s;
+    transition: 0.5s;
 }
 
 .anotherPrograms .row button {
@@ -535,3 +614,160 @@ header ul li a.active {
     }
 }
 
+footer {
+    margin: 100px 0;
+}
+
+footer .row {
+    display: flex;
+    justify-content: center;
+}
+
+footer .col-12 h2 {
+    color: var(--neutral2);
+} 
+
+footer .col-12{
+    width: 350px;
+}
+
+footer .container-fluid ul li {
+    list-style: none;
+    font-size: 20px;
+    line-height: 2rem;
+}
+
+footer .container-fluid ul li a {
+    text-decoration: none;
+    /* text-indent: 2rem; */
+    color: var(--neutral2)
+}
+
+footer .container-fluid ul li a:hover {
+    color: var(--secondary)
+}
+
+footer .licence {
+    text-align: center;
+    color: #666;
+    margin-top: 20px;
+}
+
+footer .line {
+    width: 100%;
+    border: 1px var(--neutral1) solid;
+}
+
+footer .follow  {
+    display: flex;
+}
+
+footer .follow h5 {
+    display: flex;
+    align-items: center;
+}
+
+footer .follow div {
+    margin: 0 10px;
+}
+
+footer .follow-item {
+    width: 50px;
+}
+
+footer .follow-item img {
+    width: 50px;
+}
+
+.plans .row {
+    display: flex;
+    justify-content: center;
+}
+
+.plans .row .col-12,
+.plans .row .col-lg-4 {
+    display: flex;
+    justify-content: center;
+}
+
+.plans .box {
+    outline: 1px var(--secondary) solid;
+    width: 400px;
+    padding: 20px;
+    border-radius: 3px;
+}
+.plans .box .header {
+    text-align: center;
+}
+
+.plans .box .header h1 {
+    text-align: center;
+    color: var(--neutral2);
+    font-weight: 600;
+}
+.plans .box .price {
+    text-align: center;
+
+}
+.plans .box .price h1 {
+    color: var(--neutral2);
+    font-weight: 900;
+}
+.plans .box .price p {
+    font-size: 14px;
+    color: var(--neutral2);
+}
+
+.plans .box .text {
+    text-align: center;
+}
+
+.plans .box .text p {
+    color: var(--neutral2);
+    padding: 20px;
+}
+
+.plans .feature h4,
+.plans .add-ons h4 {
+    color: var(--primary);
+    margin-left: 20px;
+}
+
+.plans .feature ul {
+    display: grid;
+}
+
+.plans ul li.feature-list1 {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding-left: 2rem;
+    background-image: url('./image/asset/teenyicons_tick-outline.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px;
+    line-height: 2;
+}
+
+.plans .feature ul li.feature-list1 p{
+    color: var(--neutral2);
+    display: flex;
+    align-items: start;
+    margin: 10px 0;
+}
+
+.plans .add-ons ul li {
+    list-style: none;
+    display: flex;
+}
+
+.plans .add-ons ul li .icon-add-ons {
+    margin-right:10px;
+    line-height: 2rem;
+}
+
+.plans .add-ons ul li .text-add-ons {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
