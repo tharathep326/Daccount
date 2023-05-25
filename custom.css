@@ -615,7 +615,8 @@ header nav ul.dropdownList li.dropdownItem .text {
 }
 
 footer {
-    margin: 100px 0;
+    padding: 50px 0;
+    margin-top: 200px;
 }
 
 footer .row {
@@ -629,6 +630,22 @@ footer .col-12 h2 {
 
 footer .col-12{
     width: 350px;
+    outline: 1px red solid;
+    padding-left: 50px;
+}
+
+footer .col-12:first-child {
+    padding-right: 50px;
+}
+
+footer .container-fluid h2 {
+    padding: 0;
+    margin: 0;
+}
+
+footer .container-fluid ul {
+    padding: 0;
+    margin: 0;
 }
 
 footer .container-fluid ul li {
@@ -665,6 +682,7 @@ footer .follow  {
 footer .follow h5 {
     display: flex;
     align-items: center;
+    margin-left:50px;
 }
 
 footer .follow div {
@@ -753,7 +771,7 @@ footer .follow-item img {
     color: var(--neutral2);
     display: flex;
     align-items: start;
-    margin: 10px 0;
+    margin: 5px 0;
 }
 
 .plans .add-ons ul li {
